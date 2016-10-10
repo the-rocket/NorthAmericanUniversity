@@ -3,21 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Theme.Base"
     android:layout_width="match_parent"
     android:layout_height="56dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:background="#3f51b5"
     android:fitsSystemWindows="true"
+    app:navigationIcon="?attr/homeAsUpIndicator"
+    style="@style/Theme.Base"
     tools:showIn="@layout/activity_main">
 
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:background="#ffffff"/>
+    <!--app:navigationIcon="?attr/homeAsUpIndicator"-->
+    <!--<android.support.v7.widget.AppCompatImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:paddingTop="16dp"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:background="#ffffff"/>-->
         <!--android:foregroundGravity="center"-->
 
     <TextView
