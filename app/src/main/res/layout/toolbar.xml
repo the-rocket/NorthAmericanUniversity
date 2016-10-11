@@ -13,36 +13,13 @@
     style="@style/Theme.Base"
     tools:showIn="@layout/activity_main">
 
-    <!--app:navigationIcon="?attr/homeAsUpIndicator"-->
-    <!--<android.support.v7.widget.AppCompatImageView-->
-        <!--android:layout_width="20dp"-->
-        <!--android:layout_height="20dp"-->
-        <!--android:paddingTop="16dp"-->
-        <!--android:paddingBottom="16dp"-->
-        <!--android:background="#ffffff"/>-->
-        <!--android:foregroundGravity="center"-->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingLeft="36dp"
-        android:paddingTop="18dp"
+        android:gravity="center"
         android:text="@string/app_name"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textColor="#ffffff"
         android:textStyle="bold"/>
 </android.support.v7.widget.Toolbar>
-
-
-    <!--<android.support.design.widget.CollapsingToolbarLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:orientation="vertical"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-
-    <!--</CoordinatoryLayout>-->
-
-    <!--app:contentScrim="?attr/colorPrimary"-->
-    <!--app:expandedTitleMarginEnd="64dp"-->
-    <!--app:expandedTitleMarginStart="48dp"-->
-    <!--app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
