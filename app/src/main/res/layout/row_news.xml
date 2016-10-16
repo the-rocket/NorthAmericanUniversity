@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageNews"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@color/Bright.White"
+        android:contentDescription="News_Image"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/titleNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/descriptionNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:maxLines="5"
+        android:ellipsize="end"
+        android:lineSpacingExtra="5dp"
+        android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/dateNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 12 October 2016"
+        android:textSize="14sp"/>
+
+</LinearLayout>

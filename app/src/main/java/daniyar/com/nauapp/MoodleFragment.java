@@ -1,4 +1,4 @@
-package daniyar.com.nauapp.Fragments;
+package daniyar.com.nauapp;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,7 +14,7 @@ import daniyar.com.nauapp.R;
  * Created by yernar on 30/09/16.
  */
 
-public class StudentFragment extends Fragment {
+public class MoodleFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,9 @@ public class StudentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.student_fragment, container, false);
+        View view = inflater.inflate(R.layout.moodle_fragment, container, false);
         TextView textView = (TextView) view;
-        textView.setText("Student_Fragment");
+        textView.setText("Moodle_Fragment");
         return view;
     }
 }

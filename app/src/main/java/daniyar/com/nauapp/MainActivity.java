@@ -4,10 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
-import butterknife.ButterKnife;
-import daniyar.com.nauapp.Fragments.MoodleFragment;
-import daniyar.com.nauapp.Fragments.NewsFragment;
-import daniyar.com.nauapp.Fragments.StudentFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -19,7 +15,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
+
         init();
     }
 
