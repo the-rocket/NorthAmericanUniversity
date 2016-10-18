@@ -1,26 +1,25 @@
-package daniyar.com.nauapp;
-
-import android.media.Image;
+package daniyar.com.nauapp.News_Fragment;
 
 /**
  * Created by yernar on 12/10/16.
  */
 
-class news {
+class News {
 
-    private Image NewsImage;
+    private String NewsImageUrl;
     private String NewsDescription;
     private String NewsTitle;
-    private int NewsDate;
+    private String NewsDate;
 
-    news(int dr, String s, String s1, int i) {
+    News(String imageUrl, String s, String s1, String i) {
+        this.NewsImageUrl = imageUrl;
         this.NewsTitle = s;
         this.NewsDescription = s1;
         this.NewsDate = i;
     }
 
-    public void setNewsImage(Image img) {
-        this.NewsImage = img;
+    public void setNewsImageUrl(String img) {
+        this.NewsImageUrl = img;
     }
     public void setNewsDescription(String Description) {
         this.NewsDescription = Description;
@@ -28,12 +27,12 @@ class news {
     public void setNewsTitle(String NewsTitle) {
         this.NewsTitle = NewsTitle;
     }
-    public void setNewsDate(int Date) {
+    public void setNewsDate(String Date) {
         this.NewsDate = Date;
     }
 
-    public Image getNewsImage() {
-        return NewsImage;
+    public String getNewsImageUrl() {
+        return NewsImageUrl;
     }
     public String getNewsDescription() {
         return NewsDescription;
@@ -41,7 +40,7 @@ class news {
     public String getNewsTitle() {
         return NewsTitle;
     }
-    public int getNewsDate() {
+    public String getNewsDate() {
         return NewsDate;
     }
 

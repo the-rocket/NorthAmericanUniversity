@@ -1,4 +1,4 @@
-package daniyar.com.nauapp;
+package daniyar.com.nauapp.News_Fragment;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,21 +12,20 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import daniyar.com.nauapp.R;
+
 
 /**
  * Created by yernar on 12/10/16.
  */
 
-class RecyclerNewsAdapter extends RecyclerView.Adapter<RecyclerNewsAdapter.ViewHolder> {
+class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
-    private List<news> myArrayList;
+    private List<News> myArrayList;
     private Context context;
 
-    RecyclerNewsAdapter(List<news> newsArray) {
+    NewsAdapter(List<News> newsArray) {
         this.myArrayList = newsArray;
-    }
-    public void insertItem(news something) {
-        myArrayList.add(something);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -54,11 +53,11 @@ class RecyclerNewsAdapter extends RecyclerView.Adapter<RecyclerNewsAdapter.ViewH
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        news one = myArrayList.get(position);
-        Glide.with(context).load("http://www.na.edu/wp-content/uploads/2016/05/talgat-Y.jpg").error(android.R.drawable.alert_dark_frame).into(holder.imageNews);
+        News one = myArrayList.get(position);
+        Glide.with(context).load(one.getNewsImageUrl()).error(android.R.drawable.alert_dark_frame).into(holder.imageNews);
         holder.titleNews.setText(one.getNewsTitle());
         holder.descriptionNews.setText(one.getNewsDescription());
-        holder.dateNews.setText(Integer.toString(one.getNewsDate()) + "October 2016");
+        holder.dateNews.setText(one.getNewsDate());
     }
 
     @Override

@@ -1,4 +1,4 @@
-package daniyar.com.nauapp;
+package daniyar.com.nauapp.Moodle_Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

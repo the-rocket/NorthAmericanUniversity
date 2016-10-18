@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
+import daniyar.com.nauapp.Moodle_Fragment.MoodleFragment;
+import daniyar.com.nauapp.News_Fragment.NewsFragment;
+import daniyar.com.nauapp.Student_Fragment.StudentFragment;
+
 
 public class MainActivity extends BaseActivity {
 
