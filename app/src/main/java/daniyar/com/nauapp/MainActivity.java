@@ -15,7 +15,6 @@ public class MainActivity extends BaseActivity {
     private String NewsFragment = "News";
     private String StudentFragment = "Student";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -16,7 +16,7 @@ import daniyar.com.nauapp.R;
 
 
 /**
- * Created by yernar on 12/10/16.
+ * Created by Daniyar Kaiyrbolatov on 12/10/16.
  */
 
 class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {

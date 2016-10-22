@@ -5,7 +5,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 /**
- * Created by yernar on 17/10/16.
+ * Created by Daniyar Kaiyrbolatov on 17/10/16.
  */
 
 class HttpClient {

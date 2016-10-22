@@ -20,15 +20,13 @@ import daniyar.com.nauapp.R;
 
 
 /**
- * Created by yernar on 30/09/16.
+ * Created by Daniyar Kaiyrbolatov on 30/09/16.
  */
 
 public class NewsFragment extends Fragment {
 
     private ArrayList<News> NewsList = new ArrayList<>();
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    //private String path;
 
     RecyclerView newsRecyclerView;
 
@@ -38,9 +36,8 @@ public class NewsFragment extends Fragment {
     }
 
     private void loadData(final OnLoadListener onLoadListener, final int page) {
-            //final String
-            //path = String.format(Locale.ROOT, "category/headlines/page/%d" + page);
-            final String path = "category/headlines/page/" + Integer.toString(page)+"/";
+
+        final String path = "category/headlines/page/" + Integer.toString(page)+"/";
 
         try {
             HttpClient.get(path, null, new AsyncHttpResponseHandler() {
@@ -84,7 +81,7 @@ public class NewsFragment extends Fragment {
 
             @Override
             public void OnSuccess(ArrayList<News> newData) {
-                //NewsList.clear();
+
                 Toast.makeText(getContext(), "Success loading", Toast.LENGTH_LONG).show();
                 NewsList.addAll(newData);
                 adapter = new NewsAdapter(NewsList);

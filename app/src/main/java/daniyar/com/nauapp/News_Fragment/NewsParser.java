@@ -1,6 +1,8 @@
 package daniyar.com.nauapp.News_Fragment;
 
 
+import android.util.Log;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,11 +12,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 /**
- * Created by yernar on 17/10/16.
+ * Created by Daniyar Kaiyrbolatov on 17/10/16.
  */
-//flickly snickly
 
 class NewsParser {
+
+    private static final String TAG = NewsParser.class.getSimpleName();
+    private static final String defaultDate = "DD MM YY";
 
     public static ArrayList<News> parseNews(String html, String Url) {
         ArrayList<News> arrayList = new ArrayList<>();
@@ -22,12 +26,26 @@ class NewsParser {
         Document doc = Jsoup.parse(html, Url);
         Elements content = doc.getElementsByClass("fusion-post-large");
 
+        //it is needed to extract dates of publication, they are located under class .updated
+        Elements dates = doc.select("span.updated");
+
         for(Element post : content) {
             String title = post.getElementsByClass("entry-title").get(0).getElementsByTag("a").get(0).text();
             String description = post.getElementsByClass("reading-box-description").get(0).text();
             String imageSrc = post.getElementsByClass("attachment-blog-large").get(0).attr("src");
-           // String Date = post.getElementsByClass("fusion-alignLeft").get(3).text();
-            arrayList.add(new News(imageSrc, title, description, "20 October 2016"));
+            arrayList.add(new News(imageSrc, title, description, defaultDate));
+        }
+        //but not only dates, author uses, .updated class, for other things too. updated class tag is <span>
+        try {
+            int i = 0;
+            for (Element date : dates) {
+                String newsDate = date.nextElementSibling().getElementsByTag("span").html();
+                Log.d("DATA:", newsDate);
+                //updating default dates of news
+                arrayList.get(i++).setNewsDate(newsDate);
+            }
+        } catch (Exception e) {
+            Log.d(TAG, e.getMessage());
         }
 
         return arrayList;
