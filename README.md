@@ -7,4 +7,4 @@ Android Application for NAU
 
 ##**while it is a demo version**
 
-![screenshot_1476808854](https://cloud.githubusercontent.com/assets/14335516/19488689/9c2f598a-952d-11e6-8a7b-eea308d1a9c5.png)
+![screenshot_1477121668](https://cloud.githubusercontent.com/assets/14335516/19776080/58cff8cc-9c38-11e6-8e31-ec1a003c0a3a.png)
